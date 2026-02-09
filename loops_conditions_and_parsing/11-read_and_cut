@@ -1,4 +1,5 @@
 #!/bin/bash
+# Displays username, UID, and home directory from /etc/passwd
 while IFS=":" read -r user _ uid _ _ home _
 do
     echo "$user:$uid:$home"

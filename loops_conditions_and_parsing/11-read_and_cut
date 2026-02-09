@@ -1,6 +1,5 @@
-#!/usr/bin/env bash
-# Read /etc/passwd and cut info
-while IFS=":" read -r user pass uid gid desc home shell
+#!/bin/bash
+while IFS=":" read -r user _ uid _ _ home _
 do
     echo "$user:$uid:$home"
 done < /etc/passwd
